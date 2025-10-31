@@ -1,8 +1,7 @@
 ---
 Name: approutes
-After:
-  - '#rootroutes'
-  - '#coreroutes'
+Before:
+  - '#modelascontrollercatchallroute'
 ---
 SilverStripe\Control\Director:
   rules:
