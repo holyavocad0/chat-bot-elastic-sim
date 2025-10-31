@@ -2,12 +2,12 @@
 
 namespace App\Extensions;
 
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 
 /**
  * Extension to make pages searchable via Elasticsearch
  */
-class SearchableExtension extends DataExtension
+class SearchableExtension extends Extension
 {
     /**
      * Get the data to be indexed in Elasticsearch

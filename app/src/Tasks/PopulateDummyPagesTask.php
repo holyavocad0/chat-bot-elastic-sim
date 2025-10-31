@@ -4,8 +4,11 @@ namespace App\Tasks;
 
 use App\Services\ElasticsearchService;
 use Page;
+use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Dev\BuildTask;
 use SilverStripe\Versioned\Versioned;
+use Symfony\Component\Console\Input\InputInterface;
+use SilverStripe\PolyExecution\PolyOutput;
 
 /**
  * Task to populate 10 dummy pages with content
@@ -15,9 +18,9 @@ class PopulateDummyPagesTask extends BuildTask
 {
     private static $segment = 'PopulateDummyPagesTask';
 
-    protected $title = 'Populate Dummy Pages';
-
-    protected $description = 'Creates 10 dummy pages with sample content and indexes them in Elasticsearch';
+    protected string $title = 'Populate Dummy Pages';
+    
+    protected string $class_description = 'Creates 10 dummy pages with sample content and indexes them in Elasticsearch';
 
     /**
      * Sample page data
@@ -94,10 +97,9 @@ class PopulateDummyPagesTask extends BuildTask
             'MetaDescription' => 'Our privacy policy explains how we collect, use, and protect your personal information.'
         ]
     ];
-
-    public function run($request)
+    public function execute(InputInterface $input, PolyOutput $output) : int
     {
-        echo "Starting to create dummy pages...\n\n";
+        $output->write("Starting to create dummy pages...\n\n");
 
         $count = 0;
         $elasticService = ElasticsearchService::singleton();
@@ -157,5 +159,6 @@ class PopulateDummyPagesTask extends BuildTask
         echo "Total pages created: {$count}\n";
         echo "All pages have been indexed in Elasticsearch.\n";
         echo "========================================\n";
+        return 1;
     }
 }
