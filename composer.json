@@ -24,7 +24,8 @@
         }
     },
     "extra": {
-        "resources-dir": "public/_resources",
+        "public-dir": "public",
+        "resources-dir": "_resources",
         "project-files-installed": [
             ".htaccess",
             "app/.htaccess",

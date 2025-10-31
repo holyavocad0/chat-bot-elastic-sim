@@ -19,7 +19,10 @@ echo "   ✓ Caches cleared"
 
 echo ""
 echo "Step 3: Updating composer configuration..."
-# composer.json has been updated to use "resources-dir": "public/_resources"
+# composer.json has been updated to use:
+#   "public-dir": "public"
+#   "resources-dir": "_resources"
+# This will create public/_resources
 echo "   ✓ Configuration updated (check composer.json)"
 
 echo ""
