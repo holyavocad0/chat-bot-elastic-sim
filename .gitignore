@@ -1,0 +1,45 @@
+# SilverStripe
+/vendor/
+/public/resources/
+/public/assets/
+/.env
+/_resources/
+assets/*
+!assets/.gitkeep
+silverstripe-cache/
+
+# DDEV
+/.ddev/.gitignore
+/.ddev/.ddev-docker-*.yaml
+/.ddev/commands/web/.ddev-docker-*.yaml
+/.ddev/commands/db/.ddev-docker-*.yaml
+/.ddev/commands/host/.ddev-docker-*.yaml
+/.ddev/import.yaml
+/.ddev/import-db/
+/.ddev/db_snapshots/
+/.ddev/.homeadditions
+
+# Node / NPM
+node_modules/
+npm-debug.log
+.npm
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

@@ -1,0 +1,12 @@
+---
+Name: mysite
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: app
+
+SilverStripe\ORM\Search\FulltextSearchable:
+  searchable_classes:
+    - SilverStripe\CMS\Model\SiteTree
