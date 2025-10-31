@@ -1,0 +1,9 @@
+---
+Name: elasticsearch-config
+After:
+  - '#coreconfig'
+---
+# Apply Searchable extension to Page class
+Page:
+  extensions:
+    - App\Extensions\SearchableExtension

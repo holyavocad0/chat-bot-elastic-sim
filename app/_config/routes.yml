@@ -1,0 +1,8 @@
+---
+Name: approutes
+Before:
+  - '#modelascontrollercatchallroute'
+---
+SilverStripe\Control\Director:
+  rules:
+    'api/chatbot//$Action': 'App\Controllers\ChatBotAPIController'
