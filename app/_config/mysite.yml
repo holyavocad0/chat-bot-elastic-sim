@@ -1,8 +1,5 @@
 ---
-Name: mysite
-After:
-  - 'framework/*'
-  - 'cms/*'
+Name: app-config
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: app
