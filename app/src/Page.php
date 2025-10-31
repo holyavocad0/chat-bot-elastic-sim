@@ -1,8 +1,7 @@
 <?php
 
-namespace App;
-
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\TextareaField;
 
 class Page extends SiteTree
 {
@@ -23,7 +22,7 @@ class Page extends SiteTree
 
         $fields->addFieldToTab(
             'Root.Main',
-            \SilverStripe\Forms\TextareaField::create('Summary', 'Page Summary')
+            TextareaField::create('Summary', 'Page Summary')
                 ->setDescription('A brief summary of this page for search results'),
             'Content'
         );

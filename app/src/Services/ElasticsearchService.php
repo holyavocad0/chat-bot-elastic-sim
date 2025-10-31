@@ -168,7 +168,7 @@ class ElasticsearchService
     {
         $this->createIndex();
 
-        $pages = \SilverStripe\CMS\Model\SiteTree::get()->filter(['ClassName' => 'App\Page']);
+        $pages = \SilverStripe\CMS\Model\SiteTree::get()->filter(['ClassName' => 'Page']);
         $count = 0;
 
         foreach ($pages as $page) {

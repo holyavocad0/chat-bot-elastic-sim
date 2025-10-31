@@ -4,6 +4,6 @@ After:
   - '#coreconfig'
 ---
 # Apply Searchable extension to Page class
-App\Page:
+Page:
   extensions:
     - App\Extensions\SearchableExtension

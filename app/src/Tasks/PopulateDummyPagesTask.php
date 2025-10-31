@@ -2,8 +2,8 @@
 
 namespace App\Tasks;
 
-use App\Page;
 use App\Services\ElasticsearchService;
+use Page;
 use SilverStripe\Dev\BuildTask;
 use SilverStripe\Versioned\Versioned;
 
